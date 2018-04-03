@@ -1,10 +1,15 @@
 ﻿# Contents
 
-###- [Motivation](#motivation)
-###- [What is Clustering?](#clustering)
-###- [Methods](#methods)
-###- [Results](#results)
+### - [Motivation](#motivation)
+
+### - [What is Clustering?](#clustering)
+
+### - [Methods](#methods)
+
+### - [Results](#results)
+
 ###- [Discussion](#discussion)
+
 
 # Motivation <a name="motivation"></a>
 
