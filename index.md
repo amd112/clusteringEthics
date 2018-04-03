@@ -1,8 +1,16 @@
-# Motivation
+﻿# Contents
 
-# What is Clustering?
+###- [Motivation](#motivation)
+###- [What is Clustering?](#clustering)
+###- [Methods](#methods)
+###- [Results](#results)
+###- [Discussion](#discussion)
 
-# Methods
+# Motivation <a name="motivation"></a>
+
+# What is Clustering? <a name="clustering"></a>
+
+# Methods <a name="methods"></a>
 
 ## Data Scraping
 
@@ -63,8 +71,8 @@ Using this numeric abstraction of the text corpus, we are able to think of each 
 
 ## Clustering Interpretation
 
-# Results
+# Results <a name="results"></a>
 
-# Discussion
+# Discussion <a name="discussion"></a>
 
 The limitations of n-gram based identification vs word type identification. Ie I am not showing any relationship between the words (Tanzania and Namibia) or (hiv and malaria) despite the fact that the first are both countries, and the second are both illnesses.
