@@ -1,17 +1,31 @@
 ﻿# Contents
 
-	### [Motivation](#motivation)
+### - [Motivation](#motivation)
 
-	### [What is Clustering?](#clustering)
+### - [What is Clustering?](#clustering)
 
-	### [Methods](#methods)
+### - [Methods](#methods)
 
-	### [Results](#results)
+### - [Results](#results)
 
-	### [Discussion](#discussion)
+### - [Discussion](#discussion)
 
 
 # Motivation <a name="motivation"></a>
+
+ideas of how we differently value different things. 
+there are many things we all agree are good, but in a world of limited resources we need to focus on the actions that do the most good
+organizations entirely devoted to this idea - EA, 80k hours, center for effective action, charity science, giveDirectly, giveWell, etc
+their conclusions aren't the same and the reasons aren't discussed (https://80000hours.org/problem-profiles/positively-shaping-artificial-intelligence/) 
+80k prioritieses ai bcsz long term future, subconciously we all devalue future ppl. 
+that needs to either be addressed or accounted for
+
+So then as we make decisions about charity what do we do?
+We need to consider the categorizations of the ethics of charity. 
+do we focus on deworming? do we focus on a specific location? do we care about art and dignity?
+
+What is a quantifiable way of finding those differences?
+Once those differences are found how can we use that information to classify people's opinions?
 
 # What is Clustering? <a name="clustering"></a>
 
