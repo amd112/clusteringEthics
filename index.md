@@ -77,15 +77,15 @@ By applying the tf-idf method, we can generate what the numeric abstraction of t
 The ‘curse of dimensionality,’ first introduced by Richard Bellman , is the idea that high dimensional datasets are commonly faced with sparse data. This curse is based on the idea that as dimensionality increases, the volume of space increases so fast that the data needed to address a problem grows exponentially with the number of dimensions. In data with a high number of dimensions, detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across.
 For a simple example, let’s look at an example of a few data points in either one or two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
 
-![1 dimension](https://github.com/amd112/clusteringEthics/blob/master/images/1_dim.jpg "One Dimensional Division")
+![1 dimension](https://github.com/amd112/clusteringEthics/blob/master/images/1_dim.jpg?raw=true "One Dimensional Division")
 
 Maintaining the same values on the first dimension, but adding data in a second, it’s less clear how these points are best divided. Without prior information on which points are truly grouped together, any of the red lines could be a good divisor. 
 
-![2 dimensions](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim.jpg "Two Dimensional Unclear Division")
+![2 dimensions](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim.jpg?raw=true "Two Dimensional Unclear Division")
  
 With more data, the number of dimensions can be compensated for. By adding data, there’s a clear separation between the two groups again. 
 
-![2 dimensions full](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim_full.jpg "Two Dimensional Clear Division")
+![2 dimensions full](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim_full.jpg?raw=true "Two Dimensional Clear Division")
 
 As dimensions increase to the hundreds, or thousands, as tends to be common with text data, if additional texts aren’t available to add to the corpus, to search for ways of reducing dimensionality. 
 
