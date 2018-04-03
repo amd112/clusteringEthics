@@ -1,14 +1,14 @@
 ﻿# Contents
 
-### - [Motivation](#motivation)
+- [Motivation](#motivation)
 
-### - [What is Clustering?](#clustering)
+- [What is Clustering?](#clustering)
 
-### - [Methods](#methods)
+- [Methods](#methods)
 
-### - [Results](#results)
+- [Results](#results)
 
-### - [Discussion](#discussion)
+- [Discussion](#discussion)
 
 
 # Motivation <a name="motivation"></a>
@@ -76,14 +76,16 @@ By applying the tf-idf method, we can generate what the numeric abstraction of t
 
 The ‘curse of dimensionality,’ first introduced by Richard Bellman , is the idea that high dimensional datasets are commonly faced with sparse data. This curse is based on the idea that as dimensionality increases, the volume of space increases so fast that the data needed to address a problem grows exponentially with the number of dimensions. In data with a high number of dimensions, detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across.
 For a simple example, let’s look at an example of a few data points in either one or two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
-  
-- insert picture here
-  
+
+![1 dimension](https://github.com/amd112/clusteringEthics/images/1_dim.jpg "One Dimensional Division")
+
 Maintaining the same values on the first dimension, but adding data in a second, it’s less clear how these points are best divided. Without prior information on which points are truly grouped together, any of the red lines could be a good divisor. 
+
+![2 dimensions](https://github.com/amd112/clusteringEthics/images/2_dim.jpg "Two Dimensional Unclear Division")
  
 With more data, the number of dimensions can be compensated for. By adding data, there’s a clear separation between the two groups again. 
 
-- insert picture here
+![2 dimensions full](https://github.com/amd112/clusteringEthics/images/2_dim_full.jpg "Two Dimensional Clear Division")
 
 As dimensions increase to the hundreds, or thousands, as tends to be common with text data, if additional texts aren’t available to add to the corpus, to search for ways of reducing dimensionality. 
 
@@ -97,4 +99,8 @@ Using this numeric abstraction of the text corpus, we are able to think of each 
 
 # Discussion <a name="discussion"></a>
 
+## Limitations
+
 The limitations of n-gram based identification vs word type identification. Ie I am not showing any relationship between the words (Tanzania and Namibia) or (hiv and malaria) despite the fact that the first are both countries, and the second are both illnesses.
+
+## Future Work
