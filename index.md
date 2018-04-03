@@ -1,14 +1,14 @@
 ﻿# Contents
 
-### [Motivation](#motivation)
+	### [Motivation](#motivation)
 
-### [What is Clustering?](#clustering)
+	### [What is Clustering?](#clustering)
 
-### [Methods](#methods)
+	### [Methods](#methods)
 
-### [Results](#results)
+	### [Results](#results)
 
-### [Discussion](#discussion)
+	### [Discussion](#discussion)
 
 
 # Motivation <a name="motivation"></a>
@@ -28,18 +28,23 @@ Consider scraping here if time runs out: “https://library.duke.edu/research/su
 
 The initial data corpus is sourced from a text file containing the names and missions of the organizations scraped. In order to analyze this text data, it must be converted to a high-dimensional numeric dataset. 
 
-For this abstraction of the text, each dimension  represents a word that exists in the corpus, and each organization is assigned a value for that dimension depending on the word’s presence in that organization’s text. Choosing the method of conversion can inherently place value on different features in the text corpus. One common choice is a binary classifier: if that word appears in the text or not. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
+In order to create an abstraction of the text, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. We calculate a value for each word for all organizations that is dependent on the word’s presence in that organization’s text. 
 
-As humans investigating a text corpus, we look at more complex relationships between texts, and in computing the best representation of those relationships is known as the term-frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also how rarely it occurs in the corpus. 
+- insert picture of data here
 
-The tf-idf helps against weighting useless information too highly. In a long text, words like ‘and’, ‘but’, ‘if’ may appear many times, but by weighting by the number of texts they appear in (likely most, if not all) we areable to scale their weight. 
-The text processing pipeline involves beginning with a complete corpus of texts:
+This process is just a method of formalizing a human decision process, and different methods of conversion can inherently place value on different forms of differentiation within the text corpus. One common choice is a binary classifier: if that word appears in the text or not. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
+
+As humans investigating a corpus, we look at more complex relationships between texts than just the number of times a word appears. Mimicking that process is difficult, but the best representation of the relationship between words and their texts is known as the term-frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also weights it by how rarely it occurs in the corpus. 
+
+The tf-idf helps against weighting useless information too highly. In a long text, words like ‘and’, ‘but’, ‘if’ may appear many times, but by dividing that count by the number of texts the word appears in (likely most, if not all) we are able to reduce the value we place on the word.
+ 
+The text processing pipeline involves beginning with a complete corpus of texts, for example:
 
 - A: “The fox went over this hill and another hill.”
 - B: “The hill had lemon trees on it!”
 - C: “Lemons grow on the trees over there.”
 
-All non-alphanumeric features are removed, along with punctuation, pluralization and capitalization. Additionally, stop words  are removed to reduce unnecessary dimensionality of the data. For large datasets, in order to further reduce dimensionality (implications of dimensionality are discussed later) words that appear in too few documents are removed, which also prevents overfitting. After text cleaning, the corpus may look like this:
+All non-alphanumeric features are removed, along with punctuation, pluralization and capitalization. Additionally, stop words are removed to reduce unnecessary dimensionality of the data. For large datasets, in order to further reduce dimensionality (implications of dimensionality are discussed later) words that appear in too few documents are removed, which also prevents overfitting. After text cleaning, the corpus may look like this:
 
 - A: “fox hill hill”
 - B: “hill lemon tree”
@@ -47,12 +52,11 @@ All non-alphanumeric features are removed, along with punctuation, pluralization
 
 By applying the tf-idf method, we can generate what the numeric abstraction of this data corpus would be:
 
-|Text|fox|	hill|	lemon|	tree|	grow|
-|----|---|---|---|---|---|
-|A|1|1|0|0|0|
-|B|0|0.5|0.5|0.5|0|
-|C|0|0|0.5|0.5|1|
-
+|Text|fox|hill|lemon|tree|grow|
+|----|---|----|-----|----|----|
+|A   |1  |1   |0    |0   |0   |
+|B   |0  |0.5 |0.5  |0.5 |0   |
+|C   |0  |0   |0.5  |0.5 |1   |
 
 ## The Curse of Dimensionality
 
@@ -68,7 +72,6 @@ With more data, the number of dimensions can be compensated for. By adding data,
 - insert picture here
 
 As dimensions increase to the hundreds, or thousands, as tends to be common with text data, if additional texts aren’t available to add to the corpus, to search for ways of reducing dimensionality. 
-
 
 ## Clustering Methodology
 
