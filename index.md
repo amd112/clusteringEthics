@@ -48,32 +48,33 @@ The initial data corpus is sourced from a text file containing the names and mis
 |Agua Bolivia|An organization made up of private and public institutions that manage water consumption in Bolivia.|
 |Preservador del Medi Ambiente|Founded in 1990, its purpose preserve and study the environment.|
 
-In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we find a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X1 through Xn (n being the number of unique words in the corpus) each represent a word.
+In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we find a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X<sub>1</sub> through X<sub>n</sub> (n being the number of unique words in the corpus) each represent a word.
 
-|Name|X1|X2|...|Xn|
+|Name|X<sub>1</sub>|X<sub>2</sub>|...|X<sub>n</sub>|
+|----|--|--|---|--|
 |Human Rights Education Institutions|||||
 |Agua Bolivia|||||
 |Preservador del Medi Ambiente|||||
 
-This process is just a method of formalizing a human decision process, and different methods of conversion can inherently place value on different forms of differentiation within the text corpus. One common choice is a binary classifier: if that word appears in the text or not. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
+Generating a numeric representation of the text is just a method of formalizing a human decision process, and different methods of conversion can inherently place value differently on the text corpus. One common choice is a binary classifier: assign 1 if the word appears in the text, and 0 otherwise. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
 
-As humans investigating a corpus, we look at more complex relationships between texts than just the number of times a word appears. Mimicking that process is difficult, but the best representation of the relationship between words and their texts is known as the term-frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also weights it by how rarely it occurs in the corpus. 
+As humans investigating a corpus we look at more complex relationships between texts than just the number of times a word appears. Mimicking that process is difficult, but a good representation of the relationship between texts and the words they contain is known as the term-frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also weights it by how rarely it occurs in the corpus. 
 
-The tf-idf helps against weighting useless information too highly. In a long text, words like ‘and’, ‘but’, ‘if’ may appear many times, but by dividing that count by the number of texts the word appears in (likely most, if not all) we are able to reduce the value we place on the word.
+The tf-idf helps against weighting useless information too highly. In a long text, words like ‘and’, ‘but’, or ‘if’ may appear many times, but by dividing the count of appearances by the number of texts the word appears in (likely most, if not all) we are able to reduce the value we place on the word.
  
-The text processing pipeline involves beginning with a complete corpus of texts, for example:
+The text processing pipeline begins with a complete corpus of texts, for example:
 
 - A: “The fox went over this hill and another hill.”
 - B: “The hill had lemon trees on it!”
 - C: “Lemons grow on the trees over there.”
 
-All non-alphanumeric features are removed, along with punctuation, pluralization and capitalization. Additionally, stop words are removed to reduce unnecessary dimensionality of the data. For large datasets, in order to further reduce dimensionality (implications of dimensionality are discussed later) words that appear in too few documents are removed, which also prevents overfitting. After text cleaning, the corpus may look like this:
+All non-alphanumeric features are removed, along with punctuation, pluralization and capitalization. Additionally, stop words are removed to reduce unnecessary dimensionality of the data. For large datasets, in order to further reduce dimensionality (implications of dimensionality are discussed later) words that appear in too few or too many documents are removed. After text cleaning, the corpus may look like this:
 
 - A: “fox hill hill”
 - B: “hill lemon tree”
 - C: “lemon grow tree”
 
-By applying the tf-idf method, we can generate what the numeric abstraction of this data corpus would be:
+By applying the tf-idf method, the numeric abstraction of this data corpus would be:
 
 |Text|fox|hill|lemon|tree|grow|
 |----|---|----|-----|----|----|
@@ -83,8 +84,9 @@ By applying the tf-idf method, we can generate what the numeric abstraction of t
 
 ## The Curse of Dimensionality
 
-The ‘curse of dimensionality,’ first introduced by Richard Bellman , is the idea that high dimensional datasets are commonly faced with sparse data. This curse is based on the idea that as dimensionality increases, the volume of space increases so fast that the data needed to address a problem grows exponentially with the number of dimensions. In data with a high number of dimensions, detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across.
-For a simple example, let’s look at an example of a few data points in either one or two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
+The ‘curse of dimensionality,’ first introduced by Richard Bellman, is the idea that high dimensional datasets are commonly faced with sparse data. This curse is based on the idea that as dimensionality increases, the volume of space increases so fast that the data needed to address a problem grows exponentially. In data with a high number of dimensions, detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across. This means that an incredible amount of data is needed to detect grouping in high dimensional data. 
+
+For a simple example, let’s look at an example of a few data points in one and two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
 
 ![1 dimension](https://github.com/amd112/clusteringEthics/blob/master/images/1_dim.jpg?raw=true "One Dimensional Division")
 
@@ -92,15 +94,15 @@ Maintaining the same values on the first dimension, but adding data in a second,
 
 ![2 dimensions](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim.jpg?raw=true "Two Dimensional Unclear Division")
  
-With more data, the number of dimensions can be compensated for. By adding data, there’s a clear separation between the two groups again. 
+By adding more data the number of dimensions, and therefore the increasing space, can be compensated for. With the new data there’s a clear separation between the two groups again. 
 
 ![2 dimensions full](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim_full.jpg?raw=true "Two Dimensional Clear Division")
 
-As dimensions increase to the hundreds, or thousands, as tends to be common with text data, if additional texts aren’t available to add to the corpus, to search for ways of reducing dimensionality. 
+As dimensions increase to the hundreds or thousands (as can happen with text data) methods of reducing dimensionality must be used. 
 
 ## Clustering Methodology
 
-Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. Different metrics can provide measures of how different each vector is from the rest. 
+Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. The question broached next is how to find
 
 ## Clustering Interpretation
 
@@ -110,6 +112,10 @@ Using this numeric abstraction of the text corpus, we are able to think of each 
 
 ## Limitations
 
-The limitations of n-gram based identification vs word type identification. Ie I am not showing any relationship between the words (Tanzania and Namibia) or (hiv and malaria) despite the fact that the first are both countries, and the second are both illnesses.
+The model used in this form text cleaning and parsing is called a 'bag-of-words' model. This treats any text as just the composition of the words it contains. This allows us to operate in the very simple framework of a collection of high-dimensional points, but doesn't address many of the complexities of language. 
+
+Other frameworks for text analysis can involve sentiment analysis, structural analayis, concept mining, extraction and abstraction, etc. Collectively, these methods broach all the ways humans interpret data, but computationally they are each complex problems in their own right. Not using these other text analysis methods means that there are likely many similarities in the text that won't be recognized. Bag-of-words models don't recognize relationships in words across texts, meaning texts that commonly use 'Tanzania' and 'Nigeria' won't be registered as containing similarities, despite the fact that both words represent the concept of a country. Similarly, bag-of-words is unable to recognize structural similarities in writing, such as grouping texts that all use passive voice. 
+
+Despite the drawbacks, bag-of-words models are extremely useful for their quick ability to turn text in to data that can be used for analysis. 
 
 ## Future Work
