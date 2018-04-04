@@ -40,11 +40,20 @@ Consider scraping here if time runs out: “https://library.duke.edu/research/su
 
 ## Data Munging
 
-The initial data corpus is sourced from a text file containing the names and missions of the organizations scraped. In order to analyze this text data, it must be converted to a high-dimensional numeric dataset. 
+The initial data corpus is sourced from a text file containing the names and missions of the organizations scraped, taking the following form:
 
-In order to create an abstraction of the text, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. We calculate a value for each word for all organizations that is dependent on the word’s presence in that organization’s text. 
+|Name			|Mission							|
+|-----------------------|---------------------------------------------------------------|
+|Human Rights Education Institutions|Educational institutions that are concerned with human rights.|
+|Agua Bolivia|An organization made up of private and public institutions that manage water consumption in Bolivia.|
+|Preservador del Medi Ambiente|Founded in 1990, its purpose preserve and study the environment.|
 
-- insert picture of data here
+In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we find a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X1 through Xn (n being the number of unique words in the corpus) each represent a word.
+
+|Name|X1|X2|...|Xn|
+|Human Rights Education Institutions|||||
+|Agua Bolivia|||||
+|Preservador del Medi Ambiente|||||
 
 This process is just a method of formalizing a human decision process, and different methods of conversion can inherently place value on different forms of differentiation within the text corpus. One common choice is a binary classifier: if that word appears in the text or not. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
 
