@@ -50,11 +50,11 @@ The initial data corpus is sourced from a text file containing the names and mis
 
 In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we find a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X<sub>1</sub> through X<sub>n</sub> (n being the number of unique words in the corpus) each represent a word.
 
-|Name|X<sub>1</sub>|X<sub>2</sub>|...|X<sub>n</sub>|
+|Name|educational|institution|...|environment|
 |----|--|--|---|--|
-|Human Rights Education Institutions|||||
-|Agua Bolivia|||||
-|Preservador del Medi Ambiente|||||
+|Human Rights Education Institutions|1|1|...|0|
+|Agua Bolivia|0|1|...|0|
+|Preservador del Medi Ambiente|0|0|...|1|
 
 Generating a numeric representation of the text is just a method of formalizing a human decision process, and different methods of conversion can inherently place value differently on the text corpus. One common choice is a binary classifier: assign 1 if the word appears in the text, and 0 otherwise. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
 
