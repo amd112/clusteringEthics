@@ -1,8 +1,8 @@
 ﻿# Contents
 
-- [Motivation](#motivation)
+- [Background](#background)
 
-- [What is Clustering?](#clustering)
+- [Defining Value](#value)
 
 - [Methods](#methods)
 
@@ -11,27 +11,31 @@
 - [Discussion](#discussion)
 
 
-# Motivation <a name="motivation"></a>
+# Background <a name="background"></a>
 
-xyz intro paragraph
+## Approaches to Humanitarianism
 
-Even within the group of prevalent humanitarian organizations, there's debate on how to best approach humanitarianism. Groups like Medecins Sans Frontieres (MSF) and the International Committee of the Red Cross (ICRC) place significant value on their principles of neutrality. Other groups hold fundamentally contrary beliefs that to make change we must be political, as the Initiative for Democracy in Iran stated by categorizing themselves as a humanitarian-political organization. 
+Even within the set of prevalent humanitarian organizations, there's debate on how to effectively approach humanitarianism. Groups like Medecins Sans Frontieres (MSF) and the International Committee of the Red Cross (ICRC) place significant value on their principles of neutrality. Other groups hold fundamentally contrary beliefs that to make change humanitarian organizations need to act humanitarian-political organizations.
 
 Fundamentally, all humanitarian groups lie under an umbrella of groups who intend to promote human welfare. The debate lies in how to categorize within that umbrella, with divisions created due to differences in belief of how to best embody the goal of promoting human welfare. 
 
-Though the differences in values seem vast - how can groups on opposite ends of neutrality be promoting the same ideals? - small tweaks in our how we individually value things can result in extreme differences in approach. 
+Though the differences in values seem vast - how can groups on opposite ends of neutrality be promoting the same ideals? - small tweaks in our how we individually value things can result in extreme differences in approach.
 
 These organizations will likely all agree that humanitarian work is good, and are trying to do as much as they can with the limited resources they have. In a world that collectively has finite resources (and allocates a very small portion of those resources towards humanitarian work) the goal should be to focus on work that does the most good possible with the resources available. 
 
-Many groups have devoted themselves entirely to the idea of optimizing humanitarianism. Research organizations, think tanks, and social movements like The Center for Effective Altruism, 80,000 Hours, The Center for Effective Action, Charity Science, giveDirectly, the Future of Humanity Institute, and giveWell have done research on which humanitarian groups are most effective, what careers contribute the most to humanitarian goals, and what realms of humanitarianism would benefit the most from further work. 
+## Cause-Prioritization
+
+Many groups have devoted themselves entirely to the idea of optimizing humanitarianism. Research organizations, think tanks, and social movements like The Center for Effective Altruism, 80,000 Hours, Charity Science, the Future of Humanity Institute, and giveWell have done research on which humanitarian groups are most effective, what careers contribute the most to humanitarian goals, and what realms of humanitarianism would benefit the most from further work. 
 
 This work exists under the term 'cause-prioritization' and is thought to be important due to its ability to uncover differences in how effective different causes are, therefore leading to much more effective long term humanitarian work. 
 
-Within the large umbrella of humanitarianism an incredible diversity of approaches exist, from groups dedicated to creating art in war zones to groups distributing eye wear in the global south. This reflects the diversity in thought of how to best improve lives globally. Even within the group of cause-prioritization organizations, many different conclusions are reached on how to best execute humanitarianism. 
+Within the large umbrella of humanitarianism an incredible diversity of approaches exist, from groups dedicated to creating art in war zones to groups distributing eye wear in the global south. This reflects the diversity in thought of how to best improve lives globally. Even within the group of cause-prioritization organizations, many different conclusions are reached on which approaches best execute humanitarianism. 
 
 The reasons for differing opinion among cause prioritization organizations isn't often discussed. Given all groups tend to focus on quantifying three areas of each cause area (importance, tractability, and uncrowdedness) shouldn't they all reach the same conclusions?
 
-The most difficult problem in quantifying distinctly human ideas is incorporating, and explicitly defining, the tremendous amount of data that humans subconciously consider when thinking about abstract ideas. When we think about our values, we rely on past experience, set beliefs, things that we may not even conciously realize are important until pointed out. When quantifying value, there are unfathomable numbers of variables that *could* be included, and the concious choices researchers make on which ideas to include create an approximation of human value that may leave out crucial factors, and may not be appropriate for people with different sets of values. 
+## Quantifying Values
+
+The most difficult problem in quantifying ideas that are distinctly human is incorporating, and explicitly defining, the tremendous amount of data that humans subconciously consider when thinking about abstract ideas. When we think about our values, we rely on past experience, set beliefs, things that we may not even conciously realize are important until pointed out. When quantifying value, there are unfathomable numbers of variables that *could* be included, and the concious choices researchers make on which ideas to include create an approximation of human value that may leave out crucial factors, and may not be appropriate for people with different sets of values. 
 
 An example of a polarizing cause is artificial intelligence safety research. Currently ranked as The Center for Effective Altriusim's top cause area, as it is considered one of the more likely existential risks. Given the number of potential humans that could exist in the future far outnumbers the number people currently alive, and the belief that there is no "moral difference between .. a life today and one in a hundred years", even a very low probability of extinction would warrant putting significant funding towards this work, due to the magnitude of the potential effect. The conclusion, though sound, doesn't acknowledge that humans tend to value in the future under a significant discount rate, or that some may not put a strong inherent value on the long term survival of humanity, especially when comparing it to the suffering currently ongoing. 
 
@@ -41,7 +45,11 @@ In the context of contributing to humanitarian work, we have the goal of optimiz
 
 But most of all, how do we find a way to quantify those differences? Once those differences are found how can we use that information to classify people's opinions in order to better find who to donate to?
 
-# What is Clustering? <a name="clustering"></a>
+# Defining Value <a name="value"></a>
+
+## Past Methods and Contexts
+
+## Applying Clustering to Humanitarianism
 
 # Methods <a name="methods"></a>
 
