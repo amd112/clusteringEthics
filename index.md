@@ -139,9 +139,28 @@ As dimensions increase to the hundreds or thousands (as can happen with text dat
 
 Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. So how does clustering find different groupings of data? 'Bag-of-words' models treat any text corpus as just the composition of words it contains - regardless of order or meaning. There are many methods to do clustering, even within the space of 'bag-of-words' models. 
 
-Here I will focus on the method implemented here: Latent-Dirichlet Allocation. 
+Here I will focus on the method implemented here: Hierarchical clustering using Ward's minimum variance method. All hierarchical clustering methods used in this context follow a similar algorithm, outlined below. 
+
+For a cluster *i*, containing *n<sub>i</sub>* objects, let the distance between cluster *j*, where *i* and *j* are arbitrary, be d<sub>ij</sub>. *D* represents the set of remaining distances for all other *ij* pairs, and *N* the number of objects to cluster. 
+
+The basic algorithm for hierarhchical clustering is:
+
+1. Start with *N* clusters, with each object allocated its own cluster.
+
+2. Find *d<sub>ij</sub>* for all *ij* combos in the d, computing the set of *D*.
+
+3. Merge the clusters *i* and *j* that have the smallest *d<sub>ij</sub>* in *D*. The merged cluster will be called cluster *k*.
+
+4. Recalculate the values in *D* that reference the recently merged cluster *i* and *j*. Calculate each new distance (*d<sub>kl</sub>*) through a weighted sum of *d<sub>il</sub>*, *d<sub>jl</sub>*, *d<sub>ij</sub>* and |*d<sub>il</sub>* - *d<sub>jl</sub>*|.
+
+5. Repeat steps 3 and 4 until *N* = 1, meaning that only one cluster is left, and there is nothing remaining to merge.
+
+Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen are those that create the smallest jump in the pooled within-group sum of squares. 
+
 
 # Results <a name="results"></a>
+
+![dendogram](https://github.com/amd112/clusteringEthics/blob/master/images/labeled_clusters_un.png?raw=true "Ward Dendogram")
 
 # Discussion <a name="discussion"></a>
 
