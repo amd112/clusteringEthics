@@ -4,6 +4,8 @@
 
 - [Defining Value](#value)
 
+- [Goals](#goals)
+
 - [Methods](#methods)
 
 - [Results](#results)
@@ -45,11 +47,14 @@ In the context of contributing to humanitarian work, we have the goal of optimiz
 
 But most of all, how do we find a way to quantify those differences? Once those differences are found how can we use that information to classify people's opinions in order to better find who to donate to?
 
+
 # Defining Value <a name="value"></a>
 
 ## Past Methods and Contexts
 
-## Applying Clustering to Humanitarianism
+## Clustering
+
+# Goals <a name="goals"></a>
 
 # Methods <a name="methods"></a>
 
