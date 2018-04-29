@@ -47,6 +47,14 @@ In the context of contributing to humanitarian work, we have the goal of optimiz
 
 But most of all, how do we find a way to quantify those differences? Once those differences are found how can we use that information to classify people's opinions in order to better find who to donate to?
 
+## Dangers of Dependence on Quantifications
+
+In the expanding space of big data, it's becoming increasingly attractive to generate auto-quantified practices that streamline decision making and value judgements. These tools are extremely useful, both for the time they can save, and the theoretical benefit of an even playing field as models treat all data the same. 
+
+The danger in using data to make judgements lies in how we are able to interpret and contextualize data. Fundamentally all computational predictive and explanatory models, from a simple linear regression to complex black box machine learning models, are trained to mimic the data they are fed with. Models find patterns in the data they've been given, but also only look for patterns in the data in the specific form they've been asked to find. These dangers have already played out in the real world with models reinforcing selective policing, inequitable jail time recommendations, 
+
+In the words of statstician George Box, "all models are wrong, but some are useful." Care needs to be taken in interpreting the blind spots and useful aspects of all models. 
+
 
 # Defining Value <a name="value"></a>
 
@@ -129,9 +137,9 @@ As dimensions increase to the hundreds or thousands (as can happen with text dat
 
 ## Clustering Methodology
 
-Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. The question broached next is how to find
+Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. So how does clustering find different groupings of data? 'Bag-of-words' models treat any text corpus as just the composition of words it contains - regardless of order or meaning. There are many methods to do clustering, even within the space of 'bag-of-words' models. 
 
-## Clustering Interpretation
+Here I will focus on the method implemented here: Latent-Dirichlet Allocation. 
 
 # Results <a name="results"></a>
 
