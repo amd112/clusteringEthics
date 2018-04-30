@@ -23,7 +23,7 @@ orgs = []
 
 for row in reader:
     orgs.append(row[0].strip())
-    doc_set.append(row[1])
+    doc_set.append(row[0].strip() + " " + row[1])
 
 stopwords = get_stop_words('en')
 stemmer = SnowballStemmer("english")

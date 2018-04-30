@@ -2,8 +2,6 @@
 
 - [Background](#background)
 
-- [Defining Value](#value)
-
 - [Goals](#goals)
 
 - [Methods](#methods)
@@ -17,61 +15,59 @@
 
 ## Approaches to Humanitarianism
 
-Even within the set of prevalent humanitarian organizations, there's debate on how to effectively approach humanitarianism. Groups like Medecins Sans Frontieres (MSF) and the International Committee of the Red Cross (ICRC) place significant value on their principles of neutrality. Other groups hold fundamentally contrary beliefs that to make change humanitarian organizations need to act humanitarian-political organizations.
+Within the set of prevalent humanitarian organizations there's debate on how to effectively approach humanitarianism. Groups like Medecins Sans Frontieres (MSF) and the International Committee of the Red Cross (ICRC) place significant value on principles of neutrality. Other groups hold the fundamentally contrary belief that change can best be made through political action.
 
-Fundamentally, all humanitarian groups lie under an umbrella of groups who intend to promote human welfare. The debate lies in how to categorize within that umbrella, with divisions created due to differences in belief of how to best embody the goal of promoting human welfare. 
+Humanitarianism fundamentally aims to promote human welfare. The debate lies primarily in how to best achieve that goal. Though differences in values seem vast small tweaks in our how we individually value things can result in extreme differences in approach. In many ways  groups on opposite ends of neutrality hold many of the same ideals.
 
-Though the differences in values seem vast - how can groups on opposite ends of neutrality be promoting the same ideals? - small tweaks in our how we individually value things can result in extreme differences in approach.
-
-These organizations will likely all agree that humanitarian work is good, and are trying to do as much as they can with the limited resources they have. In a world that collectively has finite resources (and allocates a very small portion of those resources towards humanitarian work) the goal should be to focus on work that does the most good possible with the resources available. 
+These organizations will likely all agree that humanitarian work is good, and are trying to do as much as they can with the limited resources they have. In a world that has finite resources and allocates a very small portion of those resources towards humanitarian work the goal is to do the most good possible with the fewest resources. 
 
 ## Cause-Prioritization
 
-Many groups have devoted themselves entirely to the idea of optimizing humanitarianism. Research organizations, think tanks, and social movements like The Center for Effective Altruism, 80,000 Hours, Charity Science, the Future of Humanity Institute, and giveWell have done research on which humanitarian groups are most effective, what careers contribute the most to humanitarian goals, and what realms of humanitarianism would benefit the most from further work. 
+In order to use resources more effectively many groups have devoted themselves to the idea of optimizing humanitarianism. Research organizations, think tanks, and social movements like The Center for Effective Altruism, 80,000 Hours, Charity Science, The Future of Humanity Institute, and giveWell have done research on which humanitarian groups are most effective, what careers contribute the most to humanitarian goals, and what realms of humanitarianism would benefit the most from further work. 
 
-This work exists under the term 'cause-prioritization' and is thought to be important due to its ability to uncover differences in how effective different causes are, therefore leading to much more effective long term humanitarian work. 
+These groups hope that 'cause-prioritization' research will help lead to more effective long term humanitarian work. 
 
-Within the large umbrella of humanitarianism an incredible diversity of approaches exist, from groups dedicated to creating art in war zones to groups distributing eye wear in the global south. This reflects the diversity in thought of how to best improve lives globally. Even within the group of cause-prioritization organizations, many different conclusions are reached on which approaches best execute humanitarianism. 
+Within the umbrella of humanitarianism an incredible diversity of approaches exist, from groups dedicated to creating art in war zones to groups distributing eye wear in the global south. This reflects the diversity in thought of how to best improve lives globally. Unfortunately, the conclusions of cause-prioritization research is as varied as the organization they investigate. 
 
 The reasons for differing opinion among cause prioritization organizations isn't often discussed. Given all groups tend to focus on quantifying three areas of each cause area (importance, tractability, and uncrowdedness) shouldn't they all reach the same conclusions?
 
 ## Quantifying Values
 
-The most difficult problem in quantifying ideas that are distinctly human is incorporating, and explicitly defining, the tremendous amount of data that humans subconciously consider when thinking about abstract ideas. When we think about our values, we rely on past experience, set beliefs, things that we may not even conciously realize are important until pointed out. When quantifying value, there are unfathomable numbers of variables that *could* be included, and the concious choices researchers make on which ideas to include create an approximation of human value that may leave out crucial factors, and may not be appropriate for people with different sets of values. 
+The most difficult problem in quantifying distinctly human ideas is explicitly defining the tremendous amount of data that humans subconciously consider when thinking about abstract ideas. When we think about our values, we rely on past experience, set beliefs, and may not even conciously realize it. When quantifying any abstract value, there are unfathomable numbers of variables that *could* be included. The concious choices researchers make on which values to include in their analysis creates an approximation of human value based on their beliefs. The choices they make may not be appropriate for people with different sets of values. 
 
-An example of a polarizing cause is artificial intelligence safety research. Currently ranked as The Center for Effective Altriusim's top cause area, as it is considered one of the more likely existential risks. Given the number of potential humans that could exist in the future far outnumbers the number people currently alive, and the belief that there is no "moral difference between .. a life today and one in a hundred years", even a very low probability of extinction would warrant putting significant funding towards this work, due to the magnitude of the potential effect. The conclusion, though sound, doesn't acknowledge that humans tend to value in the future under a significant discount rate, or that some may not put a strong inherent value on the long term survival of humanity, especially when comparing it to the suffering currently ongoing. 
+To create a measure of how much value an idea holds for a given individual, a near infinite set of knobs defining how we personaly value things realtive to each other would need to be defined and tweaked. For any given issue many small definitions of value are involved, as well as the relationships those value systems have. Do we value a life today the same as a life in 100 years? Do we value reducing pain of a terminal patient equally to healing a patient who wasn't in pain? Does intervineing in disease through proventative care carry the same value as curing a patient who already has the disease? Is a human life worth the same amount as an animal's life? It is questions like this, and the relative value we place on different aspects of human life that lead to the large differences in humanitarian approaches, the best example being the deeply felt convictions on both sides of the neutrality debate. 
 
-To accurately measure value for individuals, a near infinite set of knobs defining how we value things relative to each other would need to be defined. Do we value a life today the same as a life in 100 years? Do we value reducing pain of a terminal patient equally to healing a patient who wasn't in pain? Does intervineing in disease through proventative care carry the same value as curing a patient who already has the disease? Is a human life worth the same amount as an animal's life?
+Given the ability to estimate the value of a given outcome, the value of a given action is a function of the value of the potential outcomes, as weighted by the probability of them occuring. Expected value is a simple measure, despite the complexities of calculating its inputs. 
 
-In the context of contributing to humanitarian work, we have the goal of optimizing our donations by considering how to optimize improvement in the context of our  value 'knob' settings. Do we value focusing on a specific location? Do we focus on number of lives saved? Do we focus on dignity in aid?
+Nonetheless, expected value is the measure used by most cause-prioritization groups to investigate cause importance and the potential for improvement in a cause area. Despite the validity of the measure, it is entirely dependent on what is chosen for inputs. 
 
-But most of all, how do we find a way to quantify those differences? Once those differences are found how can we use that information to classify people's opinions in order to better find who to donate to?
+The Center for Effective Altriusm recently ranked artificial intelligence safety research as a top cause area. Artificial inteligence was ranked as one of the most likely existential risks. Given that the number of potential humans that could exist in the future far outnumbers the number people currently alive, along with the premise that there is no "moral difference between .. a life today and one in a hundred years", the magnitude of the moral implications is enormous. Even with a minisculte probability of extinction, enormity of the implications warrany putting significant funding towards this are. 
+
+Though these conclusions are logical, they are dependent on the value system placing equal moral importance on life today and the far future. Humans tend to value future revards at a high discount rate, and some may not even put stock in the inherent value of long term survival of humanity. Either of these differences in value would significantly alter the conclusion, despite the consistency and validity of their methods. 
+
+In the context of humanitarian work, we have the goal of optimizing work in the context of our value 'knob' settings. Do we value focusing on a specific location? Do we focus on number of lives saved? Do we focus on dignity in aid? But most of all, how do we find a way to quantify those differences? What can those differences reveal to us about the way groups differentiate themselves?
 
 ## Dangers of Dependence on Quantifications
 
-In the expanding space of big data, it's becoming increasingly attractive to generate auto-quantified practices that streamline decision making and value judgements. These tools are extremely useful, both for the time they can save, and the theoretical benefit of an even playing field as models treat all data the same. 
+In the expanding space of big data, it's becoming increasingly attractive to generate auto-quantifying practices that streamline decision making and the need for human value judgements. These tools are extremely useful, both for the time they can save and the theoretical benefit of an even playing field where models treat all data the same. 
 
-The danger in using data to make judgements lies in how we are able to interpret and contextualize data. Fundamentally all computational predictive and explanatory models, from a simple linear regression to complex black box machine learning models, are trained to mimic the data they are fed with. Models find patterns in the data they've been given, but also only look for patterns in the data in the specific form they've been asked to find. These dangers have already played out in the real world with models reinforcing selective policing, inequitable jail time recommendations, 
+The danger in using data to make judgements lies in how we are able to interpret and contextualize data. Fundamentally all computational predictive and explanatory models, from a simple linear regression to complex black box machine learning models, are trained to mimic the data they are fed with. Models find patterns in the data they've been given, but also only look for patterns in the data in the specific form they've been asked to find. These dangers have already played out in the real world with models reinforcing selective policing, recommending inequitable jail time, and inaccurately idenfiying minority faces. These models are not inherently biased - they've been trained to follow the biases that currently play out in society. Models can be tools for equity, or the justification and formalization of human bias.  
 
 In the words of statstician George Box, "all models are wrong, but some are useful." Care needs to be taken in interpreting the blind spots and useful aspects of all models. 
 
-
-# Defining Value <a name="value"></a>
-
-## Past Methods and Contexts
-
-## Clustering
-
 # Goals <a name="goals"></a>
+
+~WTF AM I TRYING TO SHOW???~
 
 # Methods <a name="methods"></a>
 
 ## Data Scraping
 
-In order to create a text corpus that best describes the motivations of NGOs in the global health and development realms, data was scraped from the GuideStar database, containing the self-reported mission statements for NGOs. 
-Limited by the time it takes to scrape extensive data, as well as the scope of interest of this project, data was scraped for organizations that appeared under the search terms “international public health”, “global health”, or ‘“international development” and “health”’.
+In order to create a text corpus that best describes the motivations of NGOs in the global health and development realms, data was scraped containing the self-reported mission statements for NGOs. 
 
-Consider scraping here if time runs out: “https://library.duke.edu/research/subject/guides/ngo_guide/ngo_database”
+To create a defined corpus, missions were scraped for NGOs holding General Consultive Status with the United Nations Economic and Social Council, as well as for NGOs mentioned on the pages of those holding General Consultive Status. 
+
+Scraping was done through Wikipedia. By first collecting the organization names from the UNESC website, it was possible to automatically paginate through the respective pages on Wikipedia. In order to approximate similar categories of statements for each group, only sections titled 'Purpose', 'Mission', 'Founding', 'Principles', or 'Philosophy' were scraped. Section titles were fuzzy matched, meaning that sections could be identified that had similar but not exact titles. The fuzzy matching algorithm used prioritises sequence of lettering, and secondarily the set and number of letters. This means that 'Mission Statement', a phrase adding text at the end, would likely be considered a close match for 'Mission', while 'Miss*ing Opin*ion', a phrase adding text in the middle, and 'I miss gin', an anagram, would be considered a poor match. 
 
 ## Data Munging
 
@@ -83,7 +79,7 @@ The initial data corpus is sourced from a text file containing the names and mis
 |Agua Bolivia|An organization made up of private and public institutions that manage water consumption in Bolivia.|
 |Preservador del Medi Ambiente|Founded in 1990, its purpose preserve and study the environment.|
 
-In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we find a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X<sub>1</sub> through X<sub>n</sub> (n being the number of unique words in the corpus) each represent a word.
+In order to analyze this text data, it must be converted to a high-dimensional numeric dataset that acts as an abstraction of the text. To this end, a dataset is created where each row represents a text, and each dimension represents a word that exists in the corpus. For each word in the corpus, we assign a value representing its commonality in each organization's text. After calculation the data takes the form shown below, where features X<sub>1</sub> through X<sub>n</sub> (n being the number of unique words in the full corpus) each represent a word.
 
 |Name|educational|institution|...|environment|
 |----|--|--|---|--|
@@ -91,11 +87,11 @@ In order to analyze this text data, it must be converted to a high-dimensional n
 |Agua Bolivia|0|1|...|0|
 |Preservador del Medi Ambiente|0|0|...|1|
 
-Generating a numeric representation of the text is just a method of formalizing a human decision process, and different methods of conversion can inherently place value differently on the text corpus. One common choice is a binary classifier: assign 1 if the word appears in the text, and 0 otherwise. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
+Generating a numeric representation of the text is a step towards formalizing a human decision process, and different methods of conversion place value differently on traits of the text corpus. One common choice is a binary classifier: assign 1 if the word appears in the text, and 0 otherwise. A slightly more useful choice is a count: how many times that word appears in the text. Both those measures leave out significant and useful information. 
 
-As humans investigating a corpus we look at more complex relationships between texts than just the number of times a word appears. Mimicking that process is difficult, but a good representation of the relationship between texts and the words they contain is known as the term-frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also weights it by how rarely it occurs in the corpus. 
+As humans investigating a corpus we look at more complex relationships between texts than just the number of times a word appears. Mimicking that process is difficult, but a good representation of the relationship between texts and the words they contain is known as the term frequency-inverse document frequency. Term frequency refers to the number of times a feature appears in a text. Inverse document frequency refers to the inverse of the number of texts within the corpora that the feature appears in. This measure, the tf-idf, gives us an idea of not just how frequently a feature appears in a text, but also deflates the falue if the word occurs in many or most texts. 
 
-The tf-idf helps against weighting useless information too highly. In a long text, words like ‘and’, ‘but’, or ‘if’ may appear many times, but by dividing the count of appearances by the number of texts the word appears in (likely most, if not all) we are able to reduce the value we place on the word.
+The tf-idf helps against weighting useless information too highly. For a corpus centered around a specific idea, eg. humanitarianism, words related to the main concept may appear many times without providing information specific to the text. Dividing the count of appearances of the word by the number of texts the word appears in (likely most, if not all) we are able to reduce the value we place on the word.
  
 The text processing pipeline begins with a complete corpus of texts, for example:
 
@@ -119,9 +115,9 @@ By applying the tf-idf method, the numeric abstraction of this data corpus would
 
 ## The Curse of Dimensionality
 
-The ‘curse of dimensionality,’ first introduced by Richard Bellman, is the idea that high dimensional datasets are commonly faced with sparse data. This curse is based on the idea that as dimensionality increases, the volume of space increases so fast that the data needed to address a problem grows exponentially. In data with a high number of dimensions, detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across. This means that an incredible amount of data is needed to detect grouping in high dimensional data. 
+The ‘curse of dimensionality,’ first introduced by Richard Bellman, is the idea that high dimensional datasets are commonly faced with the problem of sparse data. As dimensionality increases, the volume of space increases so fast that the data needed to find patterns grows exponentially. In data with a high number of dimensions detecting similarities in data can be difficult, as all observations seem distinct due to the vastness of space they are distributed across. This means that an incredible amount of data is needed to detect grouping in high dimensional data. 
 
-For a simple example, let’s look at an example of a few data points in one and two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
+For a simple example, let’s look at a few data points in one and two dimensions. In a single dimension, the red line is a very clear divisor between two groups of points. 
 
 ![1 dimension](https://github.com/amd112/clusteringEthics/blob/master/images/1_dim.jpg?raw=true "One Dimensional Division")
 
@@ -129,7 +125,7 @@ Maintaining the same values on the first dimension, but adding data in a second,
 
 ![2 dimensions](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim.jpg?raw=true "Two Dimensional Unclear Division")
  
-By adding more data the number of dimensions, and therefore the increasing space, can be compensated for. With the new data there’s a clear separation between the two groups again. 
+By adding more data the number of dimensions can be compensated for. With the new data there’s a clear separation between the two groups again. 
 
 ![2 dimensions full](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim_full.jpg?raw=true "Two Dimensional Clear Division")
 
@@ -141,26 +137,39 @@ Using this numeric abstraction of the text corpus, we are able to think of each 
 
 Here I will focus on the method implemented here: Hierarchical clustering using Ward's minimum variance method. All hierarchical clustering methods used in this context follow a similar algorithm, outlined below. 
 
-For a cluster *i*, containing *n<sub>i</sub>* objects, let the distance between cluster *j*, where *i* and *j* are arbitrary, be d<sub>ij</sub>. *D* represents the set of remaining distances for all other *ij* pairs, and *N* the number of objects to cluster. 
+For a cluster *i*, containing *n<sub>i</sub>* objects, let the distance to cluster *j*, where *i* and *j* are arbitrary, be *d<sub>ij</sub>*. *D* represents the set of distances between all *ij* pairs, and *N* the number of objects to cluster. 
 
 The basic algorithm for hierarhchical clustering is:
 
-1. Start with *N* clusters, with each object allocated its own cluster.
+1. Start with *N* clusters, one for each initial observation.
 
-2. Find *d<sub>ij</sub>* for all *ij* combos in the d, computing the set of *D*.
+2. Find *d<sub>ij</sub>* for all *ij* combos of clusters, computing the set *D*.
 
 3. Merge the clusters *i* and *j* that have the smallest *d<sub>ij</sub>* in *D*. The merged cluster will be called cluster *k*.
 
-4. Recalculate the values in *D* that reference the recently merged cluster *i* and *j*. Calculate each new distance (*d<sub>kl</sub>*) through a weighted sum of *d<sub>il</sub>*, *d<sub>jl</sub>*, *d<sub>ij</sub>* and |*d<sub>il</sub>* - *d<sub>jl</sub>*|.
+4. Recalculate the values in *D* that reference the recently merged cluster *i* and *j*. Calculate each new distance (*d<sub>kl</sub>*) through a weighted sum of *d<sub>il</sub>*, *d<sub>jl</sub>*, *d<sub>ij</sub>* and (*d<sub>il</sub>* - *d<sub>jl</sub>*).
 
 5. Repeat steps 3 and 4 until *N* = 1, meaning that only one cluster is left, and there is nothing remaining to merge.
 
 Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen are those that create the smallest jump in the pooled within-group sum of squares. 
 
+## Salient Features
+
 
 # Results <a name="results"></a>
 
+Below is the dendogram generated through clustering. As discussed in methods, the dendogram is generated bottom up, starting with each organization as its owen cluster and merging the clusters that increase the pooled within-group sum of squares least. On the x-axis we see each of the organizations. On the y-axis is the cummulative within-group sum of squares. The level at which two clusters merge represents the increase in within-group sum of squares at that merge. This visual representation of the clustering process is similar to an evolutionary tree, with higher level merges representing more 'evolutionarily' distinct groups. 
+
+Switching the frame work to a top down approach, initially all organizations are in one large cluster. At each of the splits salient words are annotated at each of the splits. These salient words don't represent the decision factors used by the model, or what is the ultimate unqiue identifier for a group. Rather, the salient words indicate at each split which words are the most distinctly relevant to each of the groups in the split. These words can give us an idea of what the split represents.
+
 ![dendogram](https://github.com/amd112/clusteringEthics/blob/master/images/labeled_clusters_un.png?raw=true "Ward Dendogram")
+
+
+
+For a larger view of the dendogram, with text on salient characteristics and organization names, click [here](https://github.com/amd112/clusteringEthics/blob/master/images/labeled_clusters_un.png?raw=true).
+
+
+
 
 # Discussion <a name="discussion"></a>
 
@@ -168,7 +177,7 @@ Ward's minimum variance method defines the distance function between two points 
 
 The model used in this form text cleaning and parsing is called a 'bag-of-words' model. This treats any text as just the composition of the words it contains. This allows us to operate in the very simple framework of a collection of high-dimensional points, but doesn't address many of the complexities of language. 
 
-Other frameworks for text analysis can involve sentiment analysis, structural analayis, concept mining, extraction and abstraction, etc. Collectively, these methods broach all the ways humans interpret data, but computationally they are each complex problems in their own right. Not using these other text analysis methods means that there are likely many similarities in the text that won't be recognized. Bag-of-words models don't recognize relationships in words across texts, meaning texts that commonly use 'Tanzania' and 'Nigeria' won't be registered as containing similarities, despite the fact that both words represent the concept of a country. Similarly, bag-of-words is unable to recognize structural similarities in writing, such as grouping texts that all use passive voice. 
+Other frameworks for text analysis can involve sentiment analysis, structural analysis, concept mining, extraction and abstraction, etc. Collectively, these methods broach all the ways humans interpret data, but computationally they are each complex problems in their own right. Not using these other text analysis methods means that there are likely many similarities in the text that won't be recognized. Bag-of-words models don't recognize relationships in words across texts, meaning texts that commonly use 'Tanzania' and 'Nigeria' won't be registered as containing similarities, despite the fact that both words represent the concept of a country. Similarly, bag-of-words is unable to recognize structural similarities in writing, such as grouping texts that all use passive voice. 
 
 Despite the drawbacks, bag-of-words models are extremely useful for their quick ability to turn text in to data that can be used for analysis. 
 
