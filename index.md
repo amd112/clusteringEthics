@@ -67,7 +67,7 @@ In order to create a text corpus that best describes the motivations of NGOs in 
 
 To create a defined corpus, missions were scraped for NGOs holding General Consultive Status with the United Nations Economic and Social Council, as well as for NGOs mentioned on the pages of those holding General Consultive Status. 
 
-Scraping was done through Wikipedia. By first collecting the organization names from the UNESC website, it was possible to automatically paginate through the respective pages on Wikipedia. In order to approximate similar categories of statements for each group, only sections titled 'Purpose', 'Mission', 'Founding', 'Principles', or 'Philosophy' were scraped. Section titles were fuzzy matched, meaning that sections could be identified that had similar but not exact titles. The fuzzy matching algorithm used prioritises sequence of lettering, and secondarily the set and number of letters. This means that 'Mission Statement', a phrase adding text at the end, would likely be considered a close match for 'Mission', while 'Miss*ing Opin*ion', a phrase adding text in the middle, and 'I miss gin', an anagram, would be considered a poor match. 
+Scraping was done through Wikipedia. By first collecting the organization names from the UNESC website, it was possible to automatically paginate through the respective pages on Wikipedia. In order to approximate similar categories of statements for each group, only sections titled 'Purpose', 'Mission', 'Founding', 'Principles', or 'Philosophy' were scraped. Section titles were fuzzy matched, meaning that sections could be identified that had similar but not exact titles. The fuzzy matching algorithm used prioritises sequence of lettering, and secondarily the set and number of letters. This means that 'Mission Statement', a phrase adding text at the end, would likely be considered a close match for 'Mission', while '**Miss**ing Opin**ion**', a phrase adding text in the middle, and 'I miss gin', an anagram, would be considered a poor match. 
 
 ## Data Munging
 
@@ -155,6 +155,12 @@ Ward's minimum variance method defines the distance function between two points 
 
 ## Salient Features
 
+In text analysis, salient features refers to the words or tokens that are most distinctive to a text. Using data on how common a word is across the corpus, we calculate the tf-idf value for each word in the corpus for a given text. This value gives us an idea of how prevalent the word is in a given text as compared to texts in the corpus as a whole. 
+
+Features with high tf-idf values are those that are common in a text or most distinctively part of that text. These salient features can give us an idea of what's unique about a text. In this case, salient features are used to give an idea of what is distinctive about a group of organizations. 
+
+To find the salient features of a group, all texts that are categorized in that group are combined to be treated as one text. Then, the texts of each group are combined to create a new corpus, and salient features are found for each group. 
+
 
 # Results <a name="results"></a>
 
@@ -172,6 +178,9 @@ For a larger view of the dendogram, with text on salient characteristics and org
 
 
 # Discussion <a name="discussion"></a>
+
+## Findings
+
 
 ## Limitations
 
