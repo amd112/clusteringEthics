@@ -75,7 +75,7 @@ In order to create a text corpus that best describes the motivations of NGOs in 
 
 To create a defined corpus, missions were scraped for NGOs holding General Consultive Status with the United Nations Economic and Social Council, as well as for NGOs mentioned on the pages of those holding General Consultive Status. 
 
-Scraping was done through Wikipedia. By first collecting the organization names from the UNESC website, it was possible to automatically paginate through the respective pages on Wikipedia. In order to approximate similar categories of statements for each group, only sections titled 'Purpose', 'Mission', 'Founding', 'Principles', or 'Philosophy' were scraped. Section titles were fuzzy matched, meaning that sections could be identified that had similar but not exact titles. The fuzzy matching algorithm used prioritises sequence of lettering, and secondarily the set and number of letters. This means that 'Mission Statement', a phrase adding text at the end, would likely be considered a close match for 'Mission', while '**Miss**ing Opin**ion**', a phrase adding text in the middle, and 'I miss gin', an anagram, would be considered a poor match. 
+Scraping was done through Wikipedia. By first collecting the organization names from the UNESC website, it was possible to automatically paginate through the respective pages on Wikipedia. In order to approximate similar categories of statements for each group, only sections titled 'Purpose', 'Mission', 'Founding', 'Principles', or 'Philosophy' were scraped. Section titles were fuzzy matched, meaning that sections could be identified that had similar but not exact titles. The fuzzy matching algorithm used prioritises sequence of lettering, and secondarily the set and number of letters. This means that 'Mission Statement', a phrase adding text at the end, would likely be considered a close match for 'Mission', while '**Miss**ing Opin**ion**', a phrase adding text in the middle, and 'I miss gin', an anagram, would be considered poor matches. 
 
 ## Data Munging
 
@@ -189,13 +189,16 @@ For a larger view of the dendogram, with text on salient characteristics and org
 
 ## Findings
 
+~WHAT DID I FIND~
 
 ## Limitations
 
 The model used in this form text cleaning and parsing is called a 'bag-of-words' model. This treats any text as just the composition of the words it contains. This allows us to operate in the very simple framework of a collection of high-dimensional points, but doesn't address many of the complexities of language. 
 
-Other frameworks for text analysis can involve sentiment analysis, structural analysis, concept mining, extraction and abstraction, etc. Collectively, these methods broach all the ways humans interpret data, but computationally they are each complex problems in their own right. Not using these other text analysis methods means that there are likely many similarities in the text that won't be recognized. Bag-of-words models don't recognize relationships in words across texts, meaning texts that commonly use 'Tanzania' and 'Nigeria' won't be registered as containing similarities, despite the fact that both words represent the concept of a country. Similarly, bag-of-words is unable to recognize structural similarities in writing, such as grouping texts that all use passive voice. 
+Other frameworks for text analysis can involve sentiment analysis, structural analysis, concept mining, extraction and abstraction, etc. Collectively, these methods broach all the ways humans interpret data, but computationally they are each complex problems in their own right. Not using these other text analysis methods means that there are likely many similarities in the text that won't be recognized. Bag-of-words models don't recognize relationships in words across texts, meaning texts that commonly use 'Tanzania' and 'Nigeria' won't be registered as similar, despite the fact that both words represent a country. Similarly, bag-of-words models are unable to recognize structural similarities in writing like passive or active voice. 
 
 Despite the drawbacks, bag-of-words models are extremely useful for their quick ability to turn text in to data that can be used for analysis. 
 
-## Future Work
+The data used in this analysis is inconsistent in many ways. As data comes from Wikipedia, each mission statement is placed within the page differently, and the surrounding text is written by different people. Even for organizations who have similar goals and similar approaches, the text used is dependent almost equally on the viewpoint of the open source author of the text. This results in a corpus with extreme variation in length, scope, style, and phrasing of texts. Ideally, the data dealt with would be uniform across groups. This data could be obtained through a survey, with a representative filling out answers to a specific set of questions in an allotted space. Mission statements themselves, without the inconsistincies created by scraping through Wikipedia, would be a significant improvement. 
+
+A different set of organizations may also reveal more useful, or at least different, insights. The list of organizations holding General Consultive status with UNESC is very varied, and including organizations mentioned on that list created additional variation. It might reveal very different things to focus on a more specific group of organizations, like emergency aid groups, long term focused health groups, dignity focused groups, etc. More focused analysis would likely reveal more about specifics of methods.
