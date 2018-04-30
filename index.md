@@ -159,11 +159,11 @@ The basic algorithm for hierarhchical clustering is:
 
 5. Repeat steps 3 and 4 until *N* = 1, meaning that only one cluster is left, and there is nothing remaining to merge.
 
-Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen are those that create the smallest jump in the pooled within-group sum of squares. 
+Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen to merge are those that create the smallest jump in the pooled within-group sum of squares. 
 
 ## Salient Features
 
-In text analysis, salient features refers to the words or tokens that are most distinctive to a text. Using data on how common a word is across the corpus, we calculate the tf-idf value for each word in the corpus for a given text. This value gives us an idea of how prevalent the word is in a given text as compared to texts in the corpus as a whole. 
+In text analysis, salient features refers to the words (aka tokens or features) that are most distinctive to a text. Using data on how common a word is across the corpus, we calculate the tf-idf value for each word in the corpus for a given text. This value gives us an idea of how prevalent the word is in a given text as compared to texts in the corpus as a whole. 
 
 Features with high tf-idf values are those that are common in a text or most distinctively part of that text. These salient features can give us an idea of what's unique about a text. In this case, salient features are used to give an idea of what is distinctive about a group of organizations. 
 
@@ -189,7 +189,19 @@ For a larger view of the dendogram, with text on salient characteristics and org
 
 ## Findings
 
-~WHAT DID I FIND~
+The clustering method used resulted in 7 groups of organizations. A subset of organizations in each cluster is shown below. 
+
+|Cluster  |Organizations|Identifiers|
+|---------|-------------|-----------|
+|Cluster 1|Defense for Children International, Arab Association for Human Rights, Minority Rights Group, Human Rights in China, Human Rights Advocates, Inc, Equality Now, Archaeologists for Human Rights, Refugee Law Project, People's Union for Civil Liberties, Doctors of the World|worldwide, services, promoting, society, instiutions, developing|
+|Cluster 2|MacArthur Foundation, Womankind Worldwide, International Council of Women, Social Justice Committee, Anti-Slavery International, Rights and Accountability in Development, First Nations Development Institute, Church World Service, Centre for Democracy and Development|worldwide, services, promotions, civil, discrimination, principles|
+|Cluster 3|We the Peoples Initiative, Parther's In Health, Operation Smile, International Federation of Fertility Societies, Hunger Project, Greenpeace, Environmental Defense, Earth Society Foundation, American Civil Liberties Union, European Public Law Center|experience, equity, programmes, people, health|
+|Cluster 4|Human Sciences Research Council, Global Vision, Institute of Development Studies, International Development Research Centre, International Statistical Institute, Centre for Science and Environment, Development Group for Alternative Policies|experience, equity, sector, scientific, policy, development|
+|Cluster 5|Canadian Research Institute for the Advancement of Women, Asia Crime Prevention Foundation, Indigenous Environmental Network, Population Services International, International Institute for Sustainable Development, Stop Hunger Now, Solar Cookers, ICRC, Family Health International, Doctors Without Borders, AmeriCares, Peace Corps, Americorps, CARE International|experience, equity, sector, scientific, awareness, resources, families|
+|Cluster 6|Social Watch, Relief International, Salvation Army, ReliefWeb, HelpAge International, Gifts in Kind International, Center for International Policy, International Social Service|experience, equity, sector, scientific, awareness, worldwide, network, information|
+|Cluster 7|United States Fund for UNICEF, Global Health Council, Mercy Corps, Oxfam, Citizens for Global Solutions, Luteran World Service, Medecins Sans Frontieres (MSF), War Child, Association for the Prevention of Torture, Save the Children, Refugees International|experience, equity, sector, scientific, awareness, ensure, united|
+
+Medecins Sans Frontieres vs Doctors Without Borders
 
 ## Limitations
 
