@@ -57,7 +57,15 @@ In the words of statstician George Box, "all models are wrong, but some are usef
 
 # Goals <a name="goals"></a>
 
-~WTF AM I TRYING TO SHOW???~
+Clustering and classification, sometimes called unsupervised and supervised classification, are modeling methods that specifically aim to find divisions in data. Classification is generally focused on modeling the relationships between traits and a known classification scheme. This form of model is predicated on a knowledge of what class past data falls in to, and uses other factors to try to predict what class future data will fall in to. Predicting recidivism is a common classification problem, and past models have been shown to be inequitable in how they classify probability of recidivism for different race groups. 
+
+Clustering is a similar problem, but is based on data that has no data on which class each data point falls in to. Clustering problems are more focused on building hyperplanes that divide high dimensional spaces in to discrete spaces in which data naturally groups. These hyperplanes don't necessarily have an obvious meaning, but the clusters built can be informative specifically in understanding how the clusters have been chosen. 
+
+The goal of this project is to scrape and cluster data on the mission statements of NGOs. The language used by NGOs in their mission statements, and even the communication intent of mission statements, is not uniform, so this classification cannot be directly framed as a classification of the values of NGOs. 
+
+However, clustering the missions of NGOs may give insight in to the language used in different fields of humanitarianism. Additionally, that language may give insight to the specific goals and intents of organizations. 
+
+Ideally, this classification would divide organizations by their values, revealing the small but deep seated differences in how these groups approach humanitarianism. Given the high dimensional and noisy nature of the data, this is an incredibly unrealistic goal. Nonetheless, this acts as a proof of concept of the possibility of quantifying value choices and invites use of more consistent data that would provide a better analysis.
 
 # Methods <a name="methods"></a>
 
@@ -166,7 +174,7 @@ To find the salient features of a group, all texts that are categorized in that 
 
 Below is the dendogram generated through clustering. As discussed in methods, the dendogram is generated bottom up, starting with each organization as its owen cluster and merging the clusters that increase the pooled within-group sum of squares least. On the x-axis we see each of the organizations. On the y-axis is the cummulative within-group sum of squares. The level at which two clusters merge represents the increase in within-group sum of squares at that merge. This visual representation of the clustering process is similar to an evolutionary tree, with higher level merges representing more 'evolutionarily' distinct groups. 
 
-Switching the frame work to a top down approach, initially all organizations are in one large cluster. At each of the splits salient words are annotated at each of the splits. These salient words don't represent the decision factors used by the model, or what is the ultimate unqiue identifier for a group. Rather, the salient words indicate at each split which words are the most distinctly relevant to each of the groups in the split. These words can give us an idea of what the split represents.
+Switching the framework to a top down approach, initially all organizations are in one large cluster. At each of the splits salient words are annotated at each of the splits. These salient words don't represent the decision factors used by the model, or what is the ultimate unqiue identifier for a group. Rather, the salient words indicate at each split which words are the most distinctly relevant to each of the groups in the split. These words can give us an idea of what the split represents.
 
 ![dendogram](https://github.com/amd112/clusteringEthics/blob/master/images/labeled_clusters_un.png?raw=true "Ward Dendogram")
 
