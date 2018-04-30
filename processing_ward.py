@@ -23,7 +23,7 @@ orgs = []
 
 for row in reader:
     orgs.append(row[0].strip())
-    doc_set.append(row[0].strip() + " " + row[1])
+    doc_set.append(row[1])
 
 stopwords = get_stop_words('en')
 stemmer = SnowballStemmer("english")
@@ -115,7 +115,7 @@ cutree = cluster.hierarchy.cut_tree(linkage_matrix, n_clusters = [3, 5, 10, 15])
 cutree = cluster.hierarchy.cut_tree(linkage_matrix, height=50)
 
 
-def find_salient_words(defined_corpus, top_n = 5):
+def find_salient_words(defined_corpus, top_n = 5, perc = 0.1):
     # defined_corpus should be format
     # [ [[text1], [text2], ... [textn]] , [1, 2, ... n] ]
 
@@ -124,7 +124,7 @@ def find_salient_words(defined_corpus, top_n = 5):
     text = defined_corpus[0]
     text = [tokenizer.tokenize(i.lower()) for i in text]
     text = [[j for j in i if len(j) > 4] for i in text]
-    text = [i for i in text if not i in en_stop]
+    text = [[j for j in i if not j in en_stop] for i in text]
 
     classifications = defined_corpus[1]
     top = []
@@ -134,7 +134,7 @@ def find_salient_words(defined_corpus, top_n = 5):
         index_text = [text[i] for i in indices]
         unique = [list(set(i)) for i in index_text]
         unique = Counter([item for sublist in unique for item in sublist])
-        index_text = [[j for j in i if unique[j] > 4] for i in index_text]
+        index_text = [[j for j in i if unique[j] > (len(indices) * perc)] for i in index_text]
         index_text = [" ".join(i) for i in index_text]
 
         vectorizer = TfidfVectorizer()
