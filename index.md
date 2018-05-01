@@ -220,6 +220,14 @@ Despite the differences between the two texts, they share many similarities, bot
 
 With that context, let's look at the salient features at each division of a cluster. These features represent the words that are most distinctive to the new split clusters. The first cluster split has the groups represented by "worldwide, services, promoting" and "experience, equity, programmes". The first group features words that focus more on the corporate aspect of humanitarianism, while the second group features words that focus more on the ideals of humanitrianism. 
 
+Other splits seem to mimic this trend, with a split between "people, mission, health" and "sector, scientific", again showing a difference between goals and methods. Splits further down the tree tend to focus on differences in method, "policy, develpment" versus "awareness" or the field that the group focuses on "community, people" versus "medical, programs". Within the group defined by "civil, discrimination, principles" better thought of as civil approaches to humanitarianism, we see a split between groups that focus on "partners, members", work by the people effected, or "assistance, alliance", capacity building to help those effected. 
+
+The splits that are found by this clustering method discovering differences in the language used to describe the goals of organizations more than they are discovering the ethical choices of those organizations. Nonetheless, differences in language surrounding ethical values are important distinctions, and illumate how groups focus on different aspects of humanitarianism, but also different aspects of their work. 
+
+Unexpectedly, the first split of clusters reduces the within group sum of squares by over 30%, and that split appears to be seperating predominantly by whether the language is describing the actions ("services, promote") or the goals ("experience, equity") of the organization. 
+
+These distinctions may not shed light on the intricate ethical work involved in making decisions on the most important aspects of humanitarianism, but they do give information on how groups choose to frame the work they do. 
+
 ## Limitations
 
 The model used in this form text cleaning and parsing is called a 'bag-of-words' model. This treats any text as just the composition of the words it contains. This allows us to operate in the very simple framework of a collection of high-dimensional points, but doesn't address many of the complexities of language. 
