@@ -189,19 +189,36 @@ For a larger view of the dendogram, with text on salient characteristics and org
 
 ## Findings
 
-The clustering method used resulted in 7 groups of organizations. A subset of organizations in each cluster is shown below. 
+The clustering method used resulted in 7 groups of organizations. A subset of organizations in each cluster is shown below. The descriptors in the first column are approximated guesses at what the comonalities between organizations the clustering algorithm is finding. 
 
-|Cluster  |Organizations|Identifiers|
+|Potential Group|Organizations|Identifiers|
 |---------|-------------|-----------|
-|Cluster 1|Defense for Children International, Arab Association for Human Rights, Minority Rights Group, Human Rights in China, Human Rights Advocates, Inc, Equality Now, Archaeologists for Human Rights, Refugee Law Project, People's Union for Civil Liberties, Doctors of the World|worldwide, services, promoting, society, instiutions, developing|
-|Cluster 2|MacArthur Foundation, Womankind Worldwide, International Council of Women, Social Justice Committee, Anti-Slavery International, Rights and Accountability in Development, First Nations Development Institute, Church World Service, Centre for Democracy and Development|worldwide, services, promotions, civil, discrimination, principles|
-|Cluster 3|We the Peoples Initiative, Parther's In Health, Operation Smile, International Federation of Fertility Societies, Hunger Project, Greenpeace, Environmental Defense, Earth Society Foundation, American Civil Liberties Union, European Public Law Center|experience, equity, programmes, people, health|
-|Cluster 4|Human Sciences Research Council, Global Vision, Institute of Development Studies, International Development Research Centre, International Statistical Institute, Centre for Science and Environment, Development Group for Alternative Policies|experience, equity, sector, scientific, policy, development|
-|Cluster 5|Canadian Research Institute for the Advancement of Women, Asia Crime Prevention Foundation, Indigenous Environmental Network, Population Services International, International Institute for Sustainable Development, Stop Hunger Now, Solar Cookers, ICRC, Family Health International, Doctors Without Borders, AmeriCares, Peace Corps, Americorps, CARE International|experience, equity, sector, scientific, awareness, resources, families|
-|Cluster 6|Social Watch, Relief International, Salvation Army, ReliefWeb, HelpAge International, Gifts in Kind International, Center for International Policy, International Social Service|experience, equity, sector, scientific, awareness, worldwide, network, information|
-|Cluster 7|United States Fund for UNICEF, Global Health Council, Mercy Corps, Oxfam, Citizens for Global Solutions, Luteran World Service, Medecins Sans Frontieres (MSF), War Child, Association for the Prevention of Torture, Save the Children, Refugees International|experience, equity, sector, scientific, awareness, ensure, united|
+|1 - Human Rights and Liberties|Defense for Children International, Arab Association for Human Rights, Minority Rights Group, Human Rights in China, Human Rights Advocates, Inc, Equality Now, Archaeologists for Human Rights, Refugee Law Project, People's Union for Civil Liberties, Doctors of the World|worldwide, services, promoting, society, instiutions, developing|
+|2 - Social Justice and Accountability|MacArthur Foundation, Womankind Worldwide, International Council of Women, Social Justice Committee, Anti-Slavery International, Rights and Accountability in Development, First Nations Development Institute, Church World Service, Centre for Democracy and Development|worldwide, services, promotions, civil, discrimination, principles|
+|3 - Equity and Health|We the Peoples Initiative, Partner's In Health, Operation Smile, International Federation of Fertility Societies, Hunger Project, Greenpeace, Environmental Defense, Earth Society Foundation, American Civil Liberties Union, European Public Law Center|experience, equity, programmes, people, health|
+|4 - Research/Computation for Policy|Human Sciences Research Council, Global Vision, Institute of Development Studies, International Development Research Centre, International Statistical Institute, Centre for Science and Environment, Development Group for Alternative Policies|experience, equity, sector, scientific, policy, development|
+|5 - Resource Provision/Health|Canadian Research Institute for the Advancement of Women, Asia Crime Prevention Foundation, Indigenous Environmental Network, Population Services International, International Institute for Sustainable Development, Stop Hunger Now, Solar Cookers, ICRC, Family Health International, Doctors Without Borders, AmeriCares, Peace Corps, Americorps, CARE International|experience, equity, sector, scientific, awareness, resources, families|
+|6 - International Network Building|International Community of Women Living with HIV/Aids, Social Watch, Relief International, CropLife International, Green Cross International, Salvation Army, ReliefWeb, International Immigrants Foundation, HelpAge International, Gifts in Kind International, Center for International Policy, International Social Service|experience, equity, sector, scientific, awareness, worldwide, network, information|
+|7 - Awareness and Public Invovlement|United States Fund for UNICEF, Global Health Council, Mercy Corps, Oxfam, Citizens for Global Solutions, Luteran World Service, Medecins Sans Frontieres (MSF), War Child, Association for the Prevention of Torture, Save the Children, Refugees International|experience, equity, sector, scientific, awareness, ensure, united|
 
-Medecins Sans Frontieres vs Doctors Without Borders
+A case study in how the classifier is operating in the case of Medecins Sans Frontieres and Doctors Without Borders. As scraping was automated, pages aren't manually inspected and overlap like this is not unusual. These two data points refer to the same group, yet they've been grouped seperately, so let's take a glimpse at how the two descriptions compare, and how they fit in to their larger groups. 
+
+Medecins Sans Frontieres scraped mission:
+> Médecins Sans Frontières (MSF) is an international humanitarian aid organisation that provides emergency medical assistance to populations in danger in more than 70 countries. MSF works in rehabilitation of hospitals and dispensaries, vaccination programmes and water and sanitation projects. MSF also works in remote health care centres, slum areas and provides training of local personnel.
+
+Doctors Without Borders scraped mission: 
+> Doctors Without Borders/Médecins Sans Frontières (MSF) is an independent international medical humanitarian organization that delivers emergency aid to people affected by armed conflict, epidemics, natural or man-made disasters, or exclusion from health care in more than 70 countries.
+
+The tokens in the description for Medecins Sans Frontiers but not in the description for Doctors Without Borders are: 
+> training, sanitation, dispensaries, assistance, slum, local, water, rehabilitation, vaccination, danger, hospitals, populations. 
+These tokens line up fairly well with the salient tokens of the group MSF has been allocated to. The cluster has a much higher prevalence of the words training, local, and rehabilitation, as well as containing many similar words, like national, education and improve. 
+
+The tokens in the description for Doctors Without Borders but not in the description for Medecins Sans Frontiers are: 
+> epidemics, exclusion, man-made, independent, conflict, disasters, natural, people, armed, doctors. The cluster has a high prevalence of the words independent, conflict, disaster, and armed, as well as similar words like emergency, alarm, and associated.
+
+Despite the differences between the two texts, they share many similarities, both featuring the words 'care', 'health', 'aid', 'medical', 'humanitarian', 'international', and 'emergency'. This is a good example of the strengths and limitations of this process. The similarities of their text places them only two hops on away from each other on the evolutionary tree, but their phrasing actually seperated them significantly. Looking only at the words contained and their prevalence this seems like a reasonable allocation. Even on first glance, the MSF description appears more focused on the types of work they do, indicating value placed specifically on "remote health care centres" and "slum areas." Comparatively the DWB description is more focused on on what causes the need for emergency aid, focusing on "armed conflict, epidemics, and ... disasters". This may be an indication of different approaches in the American and Swiss approaches to the group, or may be an indication of the intent of the unknown author of the Wikipedia article. 
+
+With that context, let's look at the salient features at each division of a cluster. These features represent the words that are most distinctive to the new split clusters. The first cluster split has the groups represented by "worldwide, services, promoting" and "experience, equity, programmes". The first group features words that focus more on the corporate aspect of humanitarianism, while the second group features words that focus more on the ideals of humanitrianism. 
 
 ## Limitations
 

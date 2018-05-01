@@ -157,3 +157,7 @@ h = 19
 cutree = cluster.hierarchy.cut_tree(linkage_matrix, height=h)
 cutree = [i[0] for i in cutree]
 find_salient_words([doc_set, cutree], top_n = 7)
+
+msf = ""
+msf = tokenize_only(msf)
+msf = [i for i in msf if not i in en_stop]
