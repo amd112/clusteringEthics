@@ -131,7 +131,7 @@ Maintaining the same values on the first dimension, but adding data in a second,
 
 ![2 dimensions](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim.jpg?raw=true "Two Dimensional Unclear Division")
  
-By adding more data the number of dimensions can be compensated for. With the new data there’s a clear separation between the two groups again. 
+By adding more data the number of dimensions can be compensated for. Looking at the same graph with added data points there’s a clear separation between the two groups again. 
 
 ![2 dimensions full](https://github.com/amd112/clusteringEthics/blob/master/images/2_dim_full.jpg?raw=true "Two Dimensional Clear Division")
 
@@ -139,7 +139,7 @@ As dimensions increase to the hundreds or thousands (as can happen with text dat
 
 ## Clustering Methodology
 
-Using this numeric abstraction of the text corpus, we are able to think of each row as a vector existing in a high dimensional space that represents a specific text within the corpus. So how does clustering find different groupings of data? 'Bag-of-words' models treat any text corpus as just the composition of words it contains - regardless of order or meaning. There are many methods to do clustering, even within the space of 'bag-of-words' models. All hierarchical clustering methods, the category of algorithm used, follow a similar algorithm, outlined below. 
+Using this numeric abstraction of the text corpus, we are able to think of each row as a point existing in a high dimensional space. So how does clustering find different groupings of data? 'Bag-of-words' models treat any text corpus as just the composition of words it contains - regardless of order or meaning. There are many methods to do clustering, even within the space of 'bag-of-words' models. All hierarchical clustering methods, the category of algorithm used, follow a similar algorithm, outlined below. 
 
 For a cluster *i*, containing *n<sub>i</sub>* objects, let the distance to cluster *j*, where *i* and *j* are arbitrary, be *d<sub>ij</sub>*. *D* represents the set of distances between all *ij* pairs, and *N* the number of objects to cluster. 
 
@@ -147,15 +147,17 @@ The basic algorithm for hierarchical clustering is:
 
 1. Start with *N* clusters, one for each initial observation.
 
-2. Find *d<sub>ij</sub>* for all *ij* combos of clusters, computing the set *D*.
+2. Find *d<sub>ij</sub>* for every *ij* combination of two clusters, computing the set *D*.
 
 3. Merge the clusters *i* and *j* that have the smallest *d<sub>ij</sub>* in *D*. The merged cluster will be called cluster *k*.
 
 4. Recalculate the values in *D* that reference the recently merged cluster *i* and *j*. Calculate each new distance (*d<sub>kl</sub>*) through a weighted sum of *d<sub>il</sub>*, *d<sub>jl</sub>*, *d<sub>ij</sub>* and (*d<sub>il</sub>* - *d<sub>jl</sub>*).
 
-5. Repeat steps 3 and 4 until *N* = 1, meaning that only one cluster is left, and there is nothing remaining to merge.
+5. Repeat steps 3 and 4 until *N* = 1 and *D* is an empty set, meaning that only one cluster is left, and there is nothing remaining to merge.
 
-The method implemented here is hierarchical clustering using Ward's minimum variance method. Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen to merge are those that create the smallest jump in the pooled within-group sum of squares. 
+The method implemented here is hierarchical clustering using Ward's minimum variance method. Methods commonly differ in the way that distance is defined, Ward's minimum variance method defines the distance function between two points (or clusters) as the pooled within-group sum of squares. This means that at each merge, the clusters chosen to merge are those that create the smallest jump in the pooled within-group sum of squares. 
+
+This method means that a sequence of clusters can be created based on the text of each group, without any human input. Though there is human impact on the output from the choice of text source and choice of abstraction (in this case NGO mission statements and the tf-idf measure,) this method largely removes human bias from the final classification.
 
 ## Salient Features
 
@@ -197,13 +199,13 @@ The clustering method used resulted in seven groups of organizations. A subset o
 |6 - International Network Building|International Community of Women Living with HIV/Aids, Social Watch, Relief International, CropLife International, Green Cross International, Salvation Army, ReliefWeb, International Immigrants Foundation, HelpAge International, Gifts in Kind International, Center for International Policy, International Social Service|experience, equity, sector, scientific, awareness, worldwide, network, information|
 |7 - Awareness and Public Involvement|United States Fund for UNICEF, Global Health Council, Mercy Corps, Oxfam, Citizens for Global Solutions, Lutheran World Service, Medecins Sans Frontieres (MSF), War Child, Association for the Prevention of Torture, Save the Children, Refugees International|experience, equity, sector, scientific, awareness, ensure, united|
 
-A case study in how the classifier is operating is the case of Medecins Sans Frontieres and Doctors Without Borders. Scraping was automated, so pages aren't manually inspected and the pages for Medecins Sans Frontieres and Doctors were both scraped. These two data points refer to the same organization, yet they've been allocated to different clusters. To better understand that, let's take a glimpse at how the two descriptions compare and how they fit in to their larger groups. 
+A case study in how the classifier is operating is the case of Medecins Sans Frontieres and Doctors Without Borders. Scraping was automated and as one may have linked to the other, the pages for Medecins Sans Frontieres and Doctors Without Borders were both scraped. These two data points refer to the same organization, yet they've been allocated to different clusters. To better understand that, let's take a glimpse at how the two descriptions compare and how they fit in to their larger cluster descriptions. 
 
 Medecins Sans Frontieres scraped mission:
 > Medecins Sans Frontieres (MSF) is an international humanitarian aid organisation that provides emergency medical assistance to populations in danger in more than 70 countries. MSF works in rehabilitation of hospitals and dispensaries, vaccination programmes and water and sanitation projects. MSF also works in remote health care centres, slum areas and provides training of local personnel.
 
 Doctors Without Borders scraped mission: 
-> Doctors Without Borders/Médecins Sans Frontières (MSF) is an independent international medical humanitarian organization that delivers emergency aid to people affected by armed conflict, epidemics, natural or man-made disasters, or exclusion from health care in more than 70 countries.
+> Doctors Without Borders/Medecins Sans Frontieres (MSF) is an independent international medical humanitarian organization that delivers emergency aid to people affected by armed conflict, epidemics, natural or man-made disasters, or exclusion from health care in more than 70 countries.
 
 The tokens in the description for Medecins Sans Frontiers but not in the description for Doctors Without Borders are: 
 > training, sanitation, dispensaries, assistance, slum, local, water, rehabilitation, vaccination, danger, hospitals, populations. 
@@ -221,7 +223,7 @@ With that context, let's look at the salient features from each division of all 
 
 Other splits seem to mimic this trend, with a split between "people, mission, health" and "sector, scientific", again showing a difference between goals and methods. Splits further down the tree tend to focus on differences in method, "policy, development" versus "awareness" or the field that the group focuses on "community, people" versus "medical, programs". Within the group defined by "civil, discrimination, principles" we see a split between groups that focus on "partners, members", work by the people affected, or "assistance, alliance", work on capacity building to help those affected. 
 
-The splits that are found by this clustering method are discovering differences in the language used to describe the goals of organizations more than they are discovering the ethical choices of those organizations. Nonetheless, differences in language surrounding ethical values are important distinctions, and illuminate how groups focus on different aspects of humanitarianism, but also different aspects of their work. 
+The splits that are found by this clustering method are discovering differences in the language used to describe the goals of organizations more than they are discovering the ethical choices of those organizations. Nonetheless, differences in language surrounding ethical values are important distinctions, and illuminate how groups focus on different aspects of humanitarianism and even different aspects of their own field. 
 
 Unexpectedly, the first split of clusters reduces the within group sum of squares by over 30%, and that split appears to be separating predominantly by whether the language is describing the actions ("services, promote") or the goals ("experience, equity") of the organization. The large drop in within group sum of squares from that one split indicates that this is a broad and common distinction between the texts of these organizations.
 
@@ -230,7 +232,21 @@ These distinctions may not shed light on the intricate ethical work involved in 
 Despite the inability of the model to discover delicate separations in the way humanitarian organizations operate and build value systems, this form of classification brings up interesting questions in the way that we choose to talk about our work. Regardless of the actual field of work, we see a glimmer of what drives each organization through their classification. Despite being a medical organization, Doctors of the World is classified in the 'Human Rights and Liberties' group due to their belief that access to health care is a right, and their mission to address 'violations of human rights and civil liberties'. Despite being a religious organization, the Church World Service falls in the 'Social Justice and Accountability' group due to their focus on 'self-reliance', 'human needs', 'partnership', and 
 'fairness'. Green Cross is primarily an environmental organization, but falls under 'International Network Building' due to their focus on 'information dissemination', 'public debate', and 'global interdependence'. 
 
-These classifications are an interesting reframing of more traditional divisions focusing on what organizatons do - public health, environmental work, human rights - and reframe the organizations in the context of why they do it. With data from a more consistent source and more data on each organization it may be possible to expand on this model to create more precise comparisons of humanitarian groups generally. 
+These classifications are an interesting comparison to more traditional divisions focusing on what organizations do - public health, environmental work, human rights - and re-frame the organizations in the context of why they do it. With data from a more consistent source and more data on each organization it may be possible to expand on this model to create more precise comparisons of humanitarian groups generally. 
+
+# Future Work
+
+## Potential Expansions
+
+The outcomes of this project discussed above are compelling, especially having found these differences from second hand descriptions of these organizations. The power of this method is evident, and the potential of this vein of work is immense. 
+
+There are several possible uses of this sort of analysis, and I will mention one aimed towards the organizations themselves, and one for the general public. 
+
+1. Organizations working in these realms have incredible amounts of institutional knowledge, and collaborate with many groups doing similar work. Using the classifications produced here, organizations that have similar values, similar objectives, or both, may be able to find each other, share insight, and collaborate. 
+
+2. People who are looking to donate, or work with, NGOs would be able to find groups that they are interested in, and whose goals align with their personal values. Especially using the framework of hierarchical clustering, individuals could be presented with the salient words from each split, creating a steadily reducing set of organizations relevant to their choices. This sort of 'choose your own adventure' would hopefully be able to weed out groups both by the type of work they do, and the values that drive them to do it. 
+
+These applications would give the relevant parties agency to find the information they need and become more meaningfully involved in humanitarian work. This sort of algorithm is appropriate for this use: providing information, with context, to individuals. Given the complexities of understanding the output, and how small changes in text can quite dramatically change the outcome (as we see in the MSF/DWB example) these classifications shouldn't be used for decision making or any official classification. 
 
 ## Limitations
 
